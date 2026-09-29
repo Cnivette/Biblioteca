@@ -115,6 +115,11 @@ public class TelaHome extends javax.swing.JFrame {
 
     private void btnConsultarAcervoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarAcervoActionPerformed
         // TODO add your handling code here:
+            TelaAcervo tacervo = new TelaAcervo();
+            tacervo.setVisible(true);
+            
+            //Fecha tela home
+            this.dispose();
     }//GEN-LAST:event_btnConsultarAcervoActionPerformed
 
     /**

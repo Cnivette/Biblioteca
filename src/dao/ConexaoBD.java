@@ -23,7 +23,6 @@ public class ConexaoBD {
 
     public static Connection conectar() throws SQLException {
         Connection conexao = DriverManager.getConnection(URL, UTILIZADOR, PALAVRA_PASSE);
-        // OBRIGATÓRIO: Desativar a confirmação automática para gerir COMMIT/ROLLBACK[cite: 2]
         conexao.setAutoCommit(false);
         return conexao;
     }
