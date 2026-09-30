@@ -17,9 +17,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexaoBD {
-    private static final String URL = "jdbc:postgresql://localhost:5432/annas_archive";
+    private static final String URL = "jdbc:postgresql://localhost:5432/annasArchive";
     private static final String UTILIZADOR = "postgres";
-    private static final String PALAVRA_PASSE = "";
+    private static final String PALAVRA_PASSE = "root";
 
     public static Connection conectar() throws SQLException {
         Connection conexao = DriverManager.getConnection(URL, UTILIZADOR, PALAVRA_PASSE);
