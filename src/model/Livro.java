@@ -12,6 +12,9 @@ public class Livro {
     private int id;
     private String titulo;
     private String autor;
+    private String isbn;
+    private int ano;
+    private int paginas;
     private int copiasTotais;
     private int copiasDisponiveis;
     
@@ -41,6 +44,30 @@ public class Livro {
         this.autor = autor;
     }
 
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
+    }
+    
     public int getCopiasTotais() {
         return copiasTotais;
     }
