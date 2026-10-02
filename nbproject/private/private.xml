@@ -4,13 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/dao/ConexaoBD.java</file>
-            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/model/Usuario.java</file>
-            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/main/SistemaBiblioteca.java</file>
-            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaLogin.java</file>
-            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaHome.java</file>
             <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaAcervo.java</file>
             <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/dao/LivroDAO.java</file>
             <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/model/Livro.java</file>
+            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaHomeEstudante.java</file>
+            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaHomeBibliotecario.java</file>
+            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaConsultaRequisicoes.java</file>
+            <file>file:/home/cnvtte/Desktop/A3%20Biblioteca/annasArchive/src/view/TelaEditarRequisicao.java</file>
         </group>
     </open-files>
 </project-private>

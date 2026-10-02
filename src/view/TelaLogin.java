@@ -91,26 +91,35 @@ public class TelaLogin extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        // TODO add your handling code here:
+
         String email = txtEmail.getText();
         String senha = new String(txtSenha.getPassword());
         
-        if (email.equals("admin") && senha.equals("123")){
+        //instancio DAO para fazer autenticação
+        dao.UsuarioDAO usuarioDAO = new dao.UsuarioDAO();
+        model.Usuario usuarioLogado = usuarioDAO.autenticarUsuario(email, senha);
+        
+        if (usuarioLogado != null) {
+            // Redireciona com base no tipo de utilizador
+            if (usuarioLogado.getTipoPerfil().equals("Estudante")){
+                TelaHomeEstudante ThomeEstudante = new TelaHomeEstudante();
+                ThomeEstudante.setVisible(true);
+            }else if (usuarioLogado.getTipoPerfil().equals("Bibliotecario")) {
+                TelaHomeBibliotecario thomeBibliotecario = new TelaHomeBibliotecario();
+                thomeBibliotecario.setVisible(true);
+            }
             
-            //Abre tela Home
-            TelaHome thome = new TelaHome();
-            thome.setVisible(true);
-            
-            //Fecha tela Login
+            // fecha tela login
             this.dispose();
-        }else{
-            //senha incorreta (mensagem de erro)
+        }else {
+            // Senha ou usuario incorreto
             javax.swing.JOptionPane.showMessageDialog(this,
-                    "Email ou Senha Inconrretos",
-                    "Erro de autenticação",
-                    javax.swing.JOptionPane.ERROR_MESSAGE);
-            
+                            "Email ou Senha Incorretos",
+                            "Erro de autenticação",
+                            javax.swing.JOptionPane.ERROR_MESSAGE);
         }
+            
+        
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed

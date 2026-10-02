@@ -42,7 +42,6 @@ public class TelaAcervo extends javax.swing.JFrame {
         btxBusca = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1450, 666));
 
         btnRequisitar.setText("Requisitar Livro Selecionado");
         btnRequisitar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -106,7 +105,7 @@ public class TelaAcervo extends javax.swing.JFrame {
                         .addComponent(txtBusca, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(53, 53, 53)
                         .addComponent(btxBusca)))
-                .addGap(0, 827, Short.MAX_VALUE))
+                .addGap(0, 559, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,11 +126,9 @@ public class TelaAcervo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -139,7 +136,7 @@ public class TelaAcervo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 608, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -171,8 +168,11 @@ public class TelaAcervo extends javax.swing.JFrame {
                 livro.getId(),
                 livro.getTitulo(),
                 livro.getAutor(),
+                livro.getAno(),
+                livro.getPaginas(),
+                livro.getCopiasDisponiveis(),
                 livro.getCopiasTotais(),
-                livro.getCopiasDisponiveis()
+                livro.getIsbn()
             });
         }
         
@@ -195,7 +195,7 @@ public class TelaAcervo extends javax.swing.JFrame {
         int idLivro = (int) tabelaAcervo.getValueAt(linhaSelecionada, 0);
         
         //Obtem o ID do usuario fazendo a requisicao
-        int idUsuario = 1;//.............................................provisorio, link id user making request
+        int idUsuario = 101;//.............................................provisorio, link id user making request
         
         // Estancia DAO e executa metodo de requisicão transacao
         dao.LivroDAO livroDAO = new dao.LivroDAO();

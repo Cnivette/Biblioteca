@@ -8,14 +8,14 @@ package view;
  *
  * @author cnvtte
  */
-public class TelaHome extends javax.swing.JFrame {
+public class TelaHomeEstudante extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaHome.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(TelaHomeEstudante.class.getName());
 
     /**
      * Creates new form TelaHome
      */
-    public TelaHome() {
+    public TelaHomeEstudante() {
         initComponents();
         this.setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
     }
@@ -101,7 +101,7 @@ public class TelaHome extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReservarSalaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReservarSalaActionPerformed
-        // TODO add your handling code here:
+     
         
         //TelaReserva reserva = new TelaReserva();
         //reserva.setVisible(true);
@@ -145,7 +145,7 @@ public class TelaHome extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new TelaHome().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new TelaHomeEstudante().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
